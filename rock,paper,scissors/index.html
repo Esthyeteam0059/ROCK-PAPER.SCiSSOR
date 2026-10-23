@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock,Paper,Scissor</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:linear-gradient(145deg, black,white);
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .container {
+      background-color: white;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 10px rgb(0 0 0 / 0.3);
+      transition: box-shadow 0.15s ease-out;
+    }
+    .container:hover {
+      box-shadow: 0px 2px 10px rgb(0 0 0 / 0.5);
+    }
+    button {
+      margin-right: 7px;
+      padding: 8px 17px;
+      border: 1px solid gray;
+      background-color: white;
+      color: black;
+      border-radius: 10px;
+      transition: transform 0.2s ease;
+      
+    }
+    button:hover {
+      transform: scale(1.2);
+      font-weight: bold;
+    }
+
+   p {
+      padding-left: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button onclick="pickChoice('rock')">Rock</button>
+    <button onclick="pickChoice('paper')">Paper</button>
+    <button onclick="pickChoice('scissors')">Scissors</button>
+    <button id="clear">Clear</button>
+
+    <p>You : <span id="dPlayer"></span></p>
+    <p>Computer : <span id="dComputer"></span></p>
+    <p>Result : <span  id="result"></span></p>
+    <!-- <p>Attempts : <span id="attempts"></span></p> -->
+
+  </div>
+  
+  <script src="index.js"></script>
+</body>
+</html>
